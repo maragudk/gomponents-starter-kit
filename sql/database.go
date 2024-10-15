@@ -3,7 +3,6 @@ package sql
 
 import (
 	"context"
-	"database/sql"
 	"fmt"
 	"io"
 	"log/slog"
@@ -14,7 +13,6 @@ import (
 
 // Database wraps a database connection pool.
 type Database struct {
-	db  *sql.DB
 	log *slog.Logger
 }
 
