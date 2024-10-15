@@ -1,6 +1,12 @@
-# template
+# gomponents-starter-kit
 
-[![Go](https://github.com/maragudk/template/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/template/actions/workflows/ci.yml)
+<img src="logo.png" alt="Logo" width="300" align="right">
+
+[![GoDoc](https://pkg.go.dev/badge/github.com/maragudk/gomponents-starter-kit)](https://pkg.go.dev/github.com/maragudk/gomponents-starter-kit)
+[![Go](https://github.com/maragudk/gomponents-starter-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/gomponents-starter-kit/actions/workflows/ci.yml)
+[![Go](https://github.com/maragudk/gomponents-starter-kit/actions/workflows/cd.yml/badge.svg)](https://github.com/maragudk/gomponents-starter-kit/actions/workflows/cd.yml)
+
+A starter kit for building a web app with gomponents, HTMX, and TailwindCSS in Go.
 
 Made with ✨sparkles✨ by [maragu](https://www.maragu.dev/).
 
