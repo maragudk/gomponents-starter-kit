@@ -21,6 +21,10 @@ cover:
 lint:
 	golangci-lint run
 
+.PHONY: start
+start: build-css
+	go run ./cmd/app
+
 tailwindcss:
 	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-$(TAILWINDCSS_OS_ARCH)
 	mv tailwindcss-$(TAILWINDCSS_OS_ARCH) tailwindcss
