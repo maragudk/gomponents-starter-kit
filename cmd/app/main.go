@@ -5,7 +5,6 @@ import (
 	"log/slog"
 	"os"
 	"os/signal"
-	"syscall"
 
 	"golang.org/x/sync/errgroup"
 	"maragu.dev/env"
@@ -32,7 +31,7 @@ func start(log *slog.Logger) error {
 	_ = env.Load()
 
 	// Catch signals to gracefully shut down the app
-	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGTERM, syscall.SIGINT)
+	ctx, stop := signal.NotifyContext(context.Background(), os.Kill, os.Interrupt)
 	defer stop()
 
 	// Set up the database, which is injected as a dependency into the HTTP server
