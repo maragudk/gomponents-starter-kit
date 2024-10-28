@@ -68,7 +68,6 @@ Edit `vscode-settings.json` and add the following:
 
 Go to `Settings` -> `Languages & Frameworks` -> `Style Sheets` -> `Tailwind CSS` and add the following (don't delete the other config):
 
-Add this item to the `includeLanguages` array field:
 ```json
 {
 	"includeLanguages": {
