@@ -57,7 +57,7 @@ func page(props PageProps, children ...Node) Node {
 
 // header bar with logo and navigation.
 func header() Node {
-	return Div(Class("bg-indigo-600 text-white shadow"),
+	return Div(Class("bg-indigo-600 text-white shadow-sm"),
 		container(true, false,
 			Div(Class("h-16 flex items-center justify-between"),
 				A(Href("/"), Class("inline-flex items-center text-xl font-semibold"),
