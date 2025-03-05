@@ -17,6 +17,8 @@ COPY html ./html/
 
 RUN ./tailwindcss -i tailwind.css -o app.css --minify
 
+
+
 FROM --platform=${BUILDPLATFORM} golang AS gobuilder
 WORKDIR /app
 
@@ -27,6 +29,8 @@ COPY . ./
 
 ARG TARGETARCH
 RUN GOOS=linux GOARCH=${TARGETARCH} go build -buildvcs=false -ldflags="-s -w" -o ./app ./cmd/app
+
+
 
 FROM debian:stable-slim AS runner
 WORKDIR /app
