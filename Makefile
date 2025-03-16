@@ -1,5 +1,12 @@
-TAILWINDCSS_OS_ARCH := macos-arm64
-#TAILWINDCSS_OS_ARCH := linux-x64
+# Detect the operating system and set TAILWINDCSS_OS_ARCH accordingly
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	TAILWINDCSS_OS_ARCH := linux-x64
+else ifeq ($(UNAME_S),Darwin)
+	TAILWINDCSS_OS_ARCH := macos-arm64
+else
+	$(error This Makefile only supports Linux and macOS. Windows is not supported.)
+endif
 
 .PHONY: benchmark
 benchmark:
