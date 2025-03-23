@@ -1,0 +1,56 @@
+name: Build Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            arch: x64
+          - os: ubuntu-latest
+            arch: arm64
+          - os: macos-latest
+            arch: arm64
+          - os: windows-latest
+            arch: x64
+          - os: windows-latest
+            arch: arm64
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        if [ "${{ runner.os }}" == "Windows" ]; then
+          choco install make
+        elif [ "${{ runner.os }}" == "macOS" ]; then
+          brew install make
+        else
+          sudo apt-get update
+          sudo apt-get install -y make
+        fi
+
+    - name: Build CSS
+      run: make build-css
+
+    - name: Run tests
+      run: make test
+
+    - name: Lint
+      uses: golangci/golangci-lint-action@v6
+      with:
+        version: latest
