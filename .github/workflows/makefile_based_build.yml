@@ -1,4 +1,4 @@
-name: Build Test
+name: Makefile build
 
 on:
   push:
