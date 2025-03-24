@@ -12,5 +12,5 @@ maragu.dev/gomponents-htmx v0.6.1 h1:vXXOkvqEDKYxSwD1UwqmVp12YwFSuM6u8lsRn7Evyng
 maragu.dev/gomponents-htmx v0.6.1/go.mod h1:51nXX+dTGff3usM7AJvbeOcQjzjpSycod+60CYeEP/M=
 maragu.dev/httph v0.3.5 h1:g0ebwFA8Hv+UOoJNcYdHy9gqPLWHTf2kHXEq3Gma3Ac=
 maragu.dev/httph v0.3.5/go.mod h1:DGE2xtKBbL/ukcCGK/IvmUA1ni6ylusjWBgAMkCvTnc=
-maragu.dev/is v0.2.0 h1:poeuVEA5GG3vrDpGmzo2KjWtIMZmqUyvGnOB0/pemig=
-maragu.dev/is v0.2.0/go.mod h1:bviaM5S0fBshCw7wuumFGTju/izopZ/Yvq4g7Klc7y8=
+maragu.dev/is v0.3.0 h1:A2B6ylehcHJw7gQqzgwDMWMkS6jmhaBu8s6fy+RG6yA=
+maragu.dev/is v0.3.0/go.mod h1:bviaM5S0fBshCw7wuumFGTju/izopZ/Yvq4g7Klc7y8=
