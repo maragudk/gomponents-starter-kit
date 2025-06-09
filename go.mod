@@ -9,7 +9,7 @@ require (
 	maragu.dev/gomponents v1.1.0
 	maragu.dev/gomponents-htmx v0.6.1
 	maragu.dev/httph v0.3.7
-	maragu.dev/is v0.3.0
+	maragu.dev/is v0.3.1
 )
 
 require github.com/mitchellh/mapstructure v1.5.0 // indirect
