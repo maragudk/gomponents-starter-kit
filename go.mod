@@ -1,10 +1,10 @@
 module app
 
-go 1.24
+go 1.24.0
 
 require (
 	github.com/go-chi/chi/v5 v5.2.3
-	golang.org/x/sync v0.16.0
+	golang.org/x/sync v0.17.0
 	maragu.dev/env v0.2.0
 	maragu.dev/gomponents v1.2.0
 	maragu.dev/gomponents-htmx v0.6.1
