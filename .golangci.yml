@@ -1,4 +1,10 @@
-version: 2
+version: "2"
 
-run:
-  timeout: 5m
+linters:
+  settings:
+    staticcheck:
+      dot-import-whitelist:
+        - "maragu.dev/gomponents"
+        - "maragu.dev/gomponents/components"
+        - "maragu.dev/gomponents/html"
+        - "maragu.dev/gomponents/http"
