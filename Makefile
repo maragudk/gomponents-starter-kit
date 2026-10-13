@@ -1,5 +1,7 @@
 TAILWINDCSS_OS_ARCH := macos-arm64
-#TAILWINDCSS_OS_ARCH := linux-x64
+ifeq ($(shell uname -s), Linux)
+	TAILWINDCSS_OS_ARCH = linux-x64
+endif
 
 .PHONY: benchmark
 benchmark:
